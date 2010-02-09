@@ -1,0 +1,76 @@
+This is pfw, a web based front end for [OpenBSD's firewall pf](http://www.openbsd.org/faq/pf/), written in [PHP](http://www.php.net).
+
+---
+
+> **This is the final resting place for PFW.** 
+> __The code is not maintained.__ 
+> **Please feel free to fork and continue the work.**
+
+---
+
+A couple of things doesn't work, because it would make things overly complicated, or
+that it doesn't make sense in a web interface. A couple of examples:
+
+  * timeout settings on a an individual rule basis. Adding this will
+    increase the complexity of the rulebase quite substantailly.
+  * source-hash keys, pf makes perfectly good strong keys by itself.
+  * set require-order, pfw will make order out of chaos. It will
+    not be possible to have disorder in the ruleset when using pfw.
+
+
+To install pfw, follow these steps.
+-----------------------------------
+
+1.  Make sure you have PHP version 5.0 or later installed (php -v reveals
+the version number).
+
+2.  Make sure you have sqlite and the PHP sqlite module installed. To test:
+
+        php -i | grep SQLite
+
+3.  Unpack the pfw archive somewhere reachable by your webserver. In this
+document, it is assumed that you have installed pfw in
+`/var/www/pfw` and it doesn't matter where you installed it. As long as you
+change everything accordingly.
+
+4.  Install the sqlite database and then:
+
+        cd /var/www/pfw && sqlite conf/config.db < docs/sql/sqlite.sql
+
+5. Make sure that the web server has write access to the conf directory 
+
+        cd /var/www/pfw && chown -R www:www conf
+
+6. Add the following to your /var/www/conf/httpd.conf
+
+        Alias /pfw "/var/www/pfw/web/"
+        <Directory "/var/www/pfw/web">
+            AllowOverride None
+            Order allow,deny
+            Allow from 127.0.0.1
+        </Directory>
+
+  This will allow you to access pfw from 127.0.0.1 only (or tunneled through
+  ssh). Please change this to suit your needs. There is currently no builtin 
+  authentication in pfw so please read the [Apache authentication documentation ](http://httpd.apache.org/docs/howto/auth.html) 
+  and add authentication accordingly.
+
+7.  pfw needs Apache to run in non-chrooted mode (otherwise, it can't
+access /etc/pf.conf) so add httpd_flags="-u" to your /etc/rc.conf.local
+and start apache by issuing 'httpd -u'. In almost all cases, you will
+want to add SSL to your apache config as well. Please read ssl(8) and
+then add httpd_flags="-u -DSSL" and start apache by issuing 'httpd -u
+-DSSL'.
+
+        echo 'httpd -u -DSSL' >> /etc/rc.conf.local
+
+8.  pfw relies on sudo to perform privileged operations and sudo needs to
+be configured for this. You need to a add this to `/etc/sudoers`: 
+
+        echo "www ALL = NOPASSWD: /var/www/pfw/bin/*" >> /etc/sudoers
+
+Feel free to verify the scripts in the bin directory to see that they don't do anything you wouldn't want before doing this.
+
+That's it. Pfw is now installed and ready to be used.
+
+Enjoy!

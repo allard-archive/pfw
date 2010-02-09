@@ -1,0 +1,266 @@
+2006-12-12  allard
+
+	* [r124] lib/packetfilter/nat.class.php: Fixed a problem with
+	  anchor statements and add multiple interfaces and protocols.
+	* [r123] web/packetfilter/filteredit.php: Fixed a bug which caused
+	  queues not to be entered properly.
+	* [r122] web/packetfilter/natedit.php: Fixed so that multiple
+	  protocols and interfaces can be specified.
+	* [r121] web/stylesheet/screen.css: Updated to CSSEdit 2.x group
+	  styles.
+	* [r120] web/packetfilter/filter.php: Fixed a bug which caused the
+	  web page not to reload properly.
+	* [r119] web/packetfilter/anchoredit.php: Fixed a bug which
+	  prevented anchors like "authpf/*" to be entered.
+
+2006-12-11  allard
+
+	* [r118] lib/packetfilter/scrub.class.php: Fixed typo found by
+	  Serge Basterot.
+	* [r117] test/packetfilter/unit/NatTest.php: Added checks for
+	  anchors and multiple protocols.
+	* [r116] lib/packetfilter/filter.class.php,
+	  lib/packetfilter/rules.class.php,
+	  test/packetfilter/unit/FilterTest.php: Added a generatedItem
+	  function in the rules class and updated the filter to use this
+	  class.
+	  Some tests had to change from {$item1, $item2} to { $item1 $item2
+	  } as well.
+	* [r115] ., docs/HISTORY, include.inc.php,
+	  lib/packetfilter/options.class.php,
+	  lib/packetfilter/rules.class.php,
+	  test/packetfilter/unit/FilterTest.php,
+	  test/packetfilter/unit/OptionsTest.php,
+	  web/packetfilter/anchoredit.php,
+	  web/packetfilter/anchorloadedit.php,
+	  web/packetfilter/install.php, web/packetfilter/macro.php,
+	  web/packetfilter/macroedit.php,
+	  web/packetfilter/manual/anchor.php,
+	  web/packetfilter/manual/filter.php,
+	  web/packetfilter/manual/table.php, web/packetfilter/natedit.php,
+	  web/packetfilter/options.php, web/packetfilter/scrubedit.php,
+	  web/packetfilter/tableedit.php, web/packetfilter/test.php,
+	  web/status/queues.php, web/status/states.php,
+	  web/status/submenu.inc.php, web/status/systemstatus.php,
+	  web/stylesheet/print.css, web/stylesheet/screen.css: Preparing
+	  for 0.7.6 release
+
+2006-05-30  allard
+
+	* [r107] releases/0.7.5, releases/0.7.5/bin/commandwrapper.sh,
+	  releases/0.7.5/docs/HISTORY, releases/0.7.5/include.inc.php,
+	  releases/0.7.5/web/global_config/pfhosts.php,
+	  releases/0.7.5/web/global_config/pfhostsedit.php,
+	  releases/0.7.5/web/log/realtime.php,
+	  releases/0.7.5/web/packetfilter/altqedit.php,
+	  releases/0.7.5/web/packetfilter/anchoredit.php,
+	  releases/0.7.5/web/packetfilter/filter.php,
+	  releases/0.7.5/web/packetfilter/filteredit.php,
+	  releases/0.7.5/web/packetfilter/manual/altq.php,
+	  releases/0.7.5/web/packetfilter/manual/filter.php,
+	  releases/0.7.5/web/packetfilter/manual/nat.php,
+	  releases/0.7.5/web/packetfilter/nat.php,
+	  releases/0.7.5/web/packetfilter/natedit.php,
+	  releases/0.7.5/web/packetfilter/options.php,
+	  releases/0.7.5/web/packetfilter/queue.php,
+	  releases/0.7.5/web/packetfilter/screen.css,
+	  releases/0.7.5/web/packetfilter/scrub.php,
+	  releases/0.7.5/web/packetfilter/submenu.inc.php,
+	  releases/0.7.5/web/packetfilter/table.php,
+	  releases/0.7.5/web/status/systemstatus.php,
+	  releases/0.7.5/web/stylesheet/screen.css: Preparing for next
+	  minor release
+
+2006-05-16  allard
+
+	* [r90] releases/0.7.4: Update for the next minor release
+
+2006-05-14  allard
+
+	* [r89] releases/0.7.3, releases/0.7.3/docs/HISTORY,
+	  releases/0.7.3/docs/README, releases/0.7.3/include.inc.php,
+	  releases/0.7.3/lib/packetfilter/filter.class.php,
+	  releases/0.7.3/web/log/realtime.php,
+	  releases/0.7.3/web/packetfilter/filteredit.php,
+	  releases/0.7.3/web/packetfilter/install.php: Updated to version
+	  0.7.3
+	  Fixed typo in the install.php script and the include.inc.php
+	  script
+	  Added checks for empty arrays in the log viewer.
+
+2006-04-05  root
+
+	* [r83] releases: Cleaned up the directory structure.
+
+2006-02-12  allard
+
+	* [r72] pfw/releases/0.7.2, pfw/releases/0.7.2/bin,
+	  pfw/releases/0.7.2/docs, pfw/releases/0.7.2/lib,
+	  pfw/releases/0.7.2/web, pfw/releases/v0.7: Changed directory
+	  structure.
+
+2005-11-26  allard
+
+	* [r61] pfw/releases/v0.7, pfw/releases/v0.7/INSTALL,
+	  pfw/releases/v0.7/README,
+	  pfw/releases/v0.7/bin/commandwrapper.sh,
+	  pfw/releases/v0.7/bin/packetfilter.sh,
+	  pfw/releases/v0.7/bin/pfctlwrapper.sh,
+	  pfw/releases/v0.7/bin/pfctlwrapper.sh.remote,
+	  pfw/releases/v0.7/conf, pfw/releases/v0.7/docs,
+	  pfw/releases/v0.7/docs/INSTALL, pfw/releases/v0.7/docs/README,
+	  pfw/releases/v0.7/docs/README_TEST,
+	  pfw/releases/v0.7/docs/sql/sqlite.sql, pfw/releases/v0.7/include,
+	  pfw/releases/v0.7/include.inc.php,
+	  pfw/releases/v0.7/lib/altq.class.php,
+	  pfw/releases/v0.7/lib/anchor.class.php,
+	  pfw/releases/v0.7/lib/filter.class.php,
+	  pfw/releases/v0.7/lib/macro.class.php,
+	  pfw/releases/v0.7/lib/nat.class.php,
+	  pfw/releases/v0.7/lib/options.class.php,
+	  pfw/releases/v0.7/lib/packetfilter,
+	  pfw/releases/v0.7/lib/packetfilter/altq.class.php,
+	  pfw/releases/v0.7/lib/packetfilter/filter.class.php,
+	  pfw/releases/v0.7/lib/packetfilter/macro.class.php,
+	  pfw/releases/v0.7/lib/packetfilter/nat.class.php,
+	  pfw/releases/v0.7/lib/packetfilter/pf.class.php,
+	  pfw/releases/v0.7/lib/packetfilter/rules.class.php,
+	  pfw/releases/v0.7/lib/packetfilter/scrub.class.php,
+	  pfw/releases/v0.7/lib/pf.class.php,
+	  pfw/releases/v0.7/lib/queue.class.php,
+	  pfw/releases/v0.7/lib/rules.class.php,
+	  pfw/releases/v0.7/lib/scrub.class.php,
+	  pfw/releases/v0.7/lib/table.class.php, pfw/releases/v0.7/test,
+	  pfw/releases/v0.7/web, pfw/releases/v0.7/web/global_config,
+	  pfw/releases/v0.7/web/log/realtime.php,
+	  pfw/releases/v0.7/web/packet_filter,
+	  pfw/releases/v0.7/web/packetfilter/files.php,
+	  pfw/releases/v0.7/web/packetfilter/filteredit.php,
+	  pfw/releases/v0.7/web/packetfilter/install.php,
+	  pfw/releases/v0.7/web/packetfilter/screen.css,
+	  pfw/releases/v0.7/web/packetfilter/submenu.inc.php,
+	  pfw/releases/v0.7/web/packetfilter/test.php,
+	  pfw/releases/v0.7/web/packetfilter/write.php,
+	  pfw/releases/v0.7/web/status/queues.php,
+	  pfw/releases/v0.7/web/status/states.php,
+	  pfw/releases/v0.7/web/status/submenu.inc.php,
+	  pfw/releases/v0.7/web/status/systemstatus.php,
+	  pfw/releases/v0.7/web/stylesheet/print.css,
+	  pfw/releases/v0.7/web/stylesheet/screen.css: copied the 0.7
+	  release
+
+2005-04-16  allard
+
+	* [r31] pfw/trunk/README, pfw/trunk/conf/pf-demo.conf,
+	  pfw/trunk/lib/altq.class.php, pfw/trunk/lib/anchor.class.php,
+	  pfw/trunk/lib/filter.class.php, pfw/trunk/lib/macro.class.php,
+	  pfw/trunk/lib/nat.class.php, pfw/trunk/lib/options.class.php,
+	  pfw/trunk/lib/pf.class.php, pfw/trunk/lib/queue.class.php,
+	  pfw/trunk/lib/rules.class.php, pfw/trunk/lib/scrub.class.php,
+	  pfw/trunk/web/altqedit.php, pfw/trunk/web/anchor.php,
+	  pfw/trunk/web/anchoredit.php, pfw/trunk/web/anchorloadedit.php,
+	  pfw/trunk/web/commentedit.php, pfw/trunk/web/filter.php,
+	  pfw/trunk/web/filteredit.php, pfw/trunk/web/include.inc.php,
+	  pfw/trunk/web/install.php, pfw/trunk/web/macro.php,
+	  pfw/trunk/web/macroedit.php, pfw/trunk/web/manual,
+	  pfw/trunk/web/manual/altq.php, pfw/trunk/web/manual/anchor.php,
+	  pfw/trunk/web/manual/filter.php, pfw/trunk/web/manual/macro.php,
+	  pfw/trunk/web/manual/nat.php, pfw/trunk/web/manual/options.php,
+	  pfw/trunk/web/manual/queue.php, pfw/trunk/web/manual/scrub.php,
+	  pfw/trunk/web/manual/table.php, pfw/trunk/web/menu.php,
+	  pfw/trunk/web/nat.php, pfw/trunk/web/natedit.php,
+	  pfw/trunk/web/options.php, pfw/trunk/web/print.css,
+	  pfw/trunk/web/queue.php, pfw/trunk/web/queueedit.php,
+	  pfw/trunk/web/screen.css, pfw/trunk/web/scrub.php,
+	  pfw/trunk/web/scrubedit.php, pfw/trunk/web/stylesheet.css,
+	  pfw/trunk/web/table.php, pfw/trunk/web/tableedit.php,
+	  pfw/trunk/web/test.php, pfw/trunk/web/write.php: Version 0.6
+	  release. Lots of major changes:
+	  - Added extracts from the OpenBSD pf.conf manual at the bottom of
+	  the
+	  edit pages.
+	  - Added Pool options (netmask, random, source-hash, static-port)
+	  - Added negated rules handling
+	  - Added Probability
+	  - Added Allow-opts
+	  - Added Routing otions (fastroute, route-to, reply-to, dup-to)
+	  - Added drop options
+	  - Changed Page Layout with menu on top.
+	  - Added a print stylesheet.
+	  - Rdr pass statements can now be edited.
+	  - Change php session name to pfwsession.
+
+2005-04-11  allard
+
+	* [r30] pfw/trunk/lib/filter.class.php,
+	  pfw/trunk/lib/nat.class.php: Fixed the fromport problem.
+	  Added rdr pass parsing.
+
+2004-08-21  allard
+
+	* [r17] pfw/trunk/README: Added version history for version 0.5.
+	* [r16] pfw/trunk/INSTALL: Changed installation instructions.
+	* [r13] pfw/trunk/bin/pfctlwrapper.sh.remote: Added some
+	  instructions in the beginning.
+	* [r12] pfw/trunk/bin/pfctlremote.sh,
+	  pfw/trunk/bin/pfctlwrapper.sh, pfw/trunk/bin/pfctlwrapper.sh.old,
+	  pfw/trunk/bin/read_pfconf.sh, pfw/trunk/bin/spock: Cleaned up for
+	  the release.
+	* [r11] pfw/trunk/lib/options.class.php: Major update with the all
+	  the settings for OpenBSD 3.5.
+	* [r10] pfw/trunk/lib/macro.class.php: Only use "{" style if there
+	  are macros in macros.
+	* [r9] pfw/trunk/lib/filter.class.php: Fixed the os matching.
+	* [r8] pfw/trunk/web/tableedit.php: Removed utf8 junk that bbedit
+	  sometimes adds.
+	* [r7] pfw/trunk/web/options.php: Major update, saving all changes
+	  correctly and cleaned up the html.
+	* [r6] pfw/trunk/web/include.inc.php: Don't display any errors.
+
+2004-08-20  allard
+
+	* [r5] pfw/trunk/bin/pfctlwrapper.sh.remote: Restore to the release
+	  status with host.example.com
+
+2004-08-17  allard
+
+	* [r4] pfw/trunk/web/filter.php, pfw/trunk/web/filteredit.php,
+	  pfw/trunk/web/include.inc.php, pfw/trunk/web/macro.php,
+	  pfw/trunk/web/nat.php, pfw/trunk/web/options.php,
+	  pfw/trunk/web/queue.php, pfw/trunk/web/scrub.php,
+	  pfw/trunk/web/stylesheet.css, pfw/trunk/web/table.php,
+	  pfw/trunk/web/write.php: Lots of code cleanup to make the output
+	  clean xhtml output and push more style to the stylesheet.
+
+2004-08-13  allard
+
+	* [r3] pfw/trunk/INSTALL: test commit
+	* [r2] pfw/trunk/INSTALL: test commit
+	* [r1] pfw, pfw/branches, pfw/tags, pfw/trunk, pfw/trunk/INSTALL,
+	  pfw/trunk/README, pfw/trunk/bin, pfw/trunk/bin/pfctlremote.sh,
+	  pfw/trunk/bin/pfctlwrapper.sh, pfw/trunk/bin/pfctlwrapper.sh.old,
+	  pfw/trunk/bin/pfctlwrapper.sh.remote,
+	  pfw/trunk/bin/read_pfconf.sh, pfw/trunk/bin/spock,
+	  pfw/trunk/conf, pfw/trunk/conf/isakmpd.conf,
+	  pfw/trunk/conf/pf-bart.conf, pfw/trunk/conf/pf-demo.conf,
+	  pfw/trunk/conf/pf-holodoc.conf, pfw/trunk/conf/pf-test1.conf,
+	  pfw/trunk/conf/pf.conf, pfw/trunk/lib,
+	  pfw/trunk/lib/altq.class.php, pfw/trunk/lib/filter.class.php,
+	  pfw/trunk/lib/macro.class.php, pfw/trunk/lib/nat.class.php,
+	  pfw/trunk/lib/options.class.php, pfw/trunk/lib/pf.class.php,
+	  pfw/trunk/lib/queue.class.php, pfw/trunk/lib/rules.class.php,
+	  pfw/trunk/lib/scrub.class.php, pfw/trunk/lib/table.class.php,
+	  pfw/trunk/web, pfw/trunk/web/altq.php,
+	  pfw/trunk/web/altqedit.php, pfw/trunk/web/commentedit.php,
+	  pfw/trunk/web/config.php, pfw/trunk/web/filter.php,
+	  pfw/trunk/web/filteredit.php, pfw/trunk/web/include.inc.php,
+	  pfw/trunk/web/index.php, pfw/trunk/web/install.php,
+	  pfw/trunk/web/macro.php, pfw/trunk/web/macroedit.php,
+	  pfw/trunk/web/menu.php, pfw/trunk/web/nat.php,
+	  pfw/trunk/web/natedit.php, pfw/trunk/web/options.php,
+	  pfw/trunk/web/queue.php, pfw/trunk/web/queueedit.php,
+	  pfw/trunk/web/scrub.php, pfw/trunk/web/scrubedit.php,
+	  pfw/trunk/web/stylesheet.css, pfw/trunk/web/table.php,
+	  pfw/trunk/web/tableedit.php, pfw/trunk/web/test.php,
+	  pfw/trunk/web/write.php: initial import
+

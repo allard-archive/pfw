@@ -1,0 +1,37 @@
+This is pfw, a web based front end for OpenBSD's packet filter (pf) written in
+PHP.
+
+The goal of pfw is to be as simple and effective as pf is. With the release of
+version 0.6, pfw has all the functionality needed for everyday use in production
+environments. There are a few minor limitations listed below. If any of them
+seem vital to you, pfw is probably not for you.
+
+
+What's not working, and probably never will is:
+- timeout settings on a an individual rule basis. Adding this will
+  increase the complexity of the rulebase quite substantailly.
+- source-hash keys, pf makes perfectly good strong keys by itself.
+- set require-order, pfw will make order out of chaos. It will
+  not be possible to have disorder in the ruleset when using pfw.
+
+About negated rules:
+  Pfw will reformat negated rules as follows:
+    ! { foo, bar } will be reformated to { !foo, !bar }
+  This was simply for interface reasons. If someone can show a simple way
+  of displaying the various rule negation possibilities in a better
+  way, I'll gladly implement them. So far, I've found this to be the 
+  best middle ground.
+
+For instructions on how to install pfw, please read INSTALL.
+
+
+Mailing Lists
+=============
+
+To be updated on new versions of pfw, send an email to
+pfw-announce-request@allard.nu with subscribe as subject.
+
+To discuss pfw with other users, please send an email to
+pfw-users-request@allard.nu with subscribe as subject.
+
+Enjoy!

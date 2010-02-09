@@ -1,0 +1,419 @@
+/*
+ * Copyright (c) 2004 Allard Consulting.  All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. All advertising materials mentioning features or use of this
+ *    software must display the following acknowledgement: This
+ *    product includes software developed by Allard Consulting
+ *    and its contributors.
+ * 4. Neither the name of Allard Consulting nor the names of
+ *    its contributors may be used to endorse or promote products
+ *    derived from this software without specific prior written
+ *    permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+ * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+ * IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+ * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+ * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+/* @group General */
+
+body
+{
+	font-family: verdana, helvetica, arial, sans-serif;
+	font-size: 75%;
+}
+
+h1
+{
+	font-size: 180%;
+}
+
+h2
+{
+	font-size: 150%;
+	margin: 1em 0 0.3em 0;
+}
+
+h3
+{
+	font-size: 130%;
+}
+
+fieldset
+{ 
+	border: 0;
+	margin-top: 0em;
+}
+
+table
+{
+	width: 100%;
+	border: none black;
+	border-collapse: collapse;
+	text-align: center;
+	overflow: visible;
+}
+
+thead
+{
+	border-left: 1px solid gray;
+}
+
+th
+{
+	background-color: gray;
+	color: white;
+	line-height: 2em;
+	font-size: 90%;
+	border-bottom: 2px solid black;
+	border-top: 1px solid black;
+}
+
+td		
+{
+	border: 1px solid #CCC;
+	padding: 1em;
+}
+
+tbody.overview td		
+{
+	border: 1px solid #CCC;
+	font-size: 80%;
+	padding: 0.3em 0.4em;
+}
+
+caption
+{
+	text-align: left;
+	margin-top: 2em;
+	margin-bottom: 0.2em;
+}
+
+label
+{
+	margin: 0.5em;
+}
+
+a, a:hover, a:visited
+{
+	text-decoration: none;
+	color: blue;
+	border-bottom: 1px dotted blue;
+}
+
+a:hover
+{
+	border-bottom: 1px solid blue;
+}
+
+code, pre
+{
+	font-size: 80%;
+	padding-left: 4em;
+}
+
+/* @end */
+
+/* @group menu */
+
+#menu
+{
+	margin-top: 20px;
+	border-bottom: 2px solid gray;
+	padding-bottom: 0.2em;
+}
+
+#menu #tabs
+{
+	margin-top: 20px;
+	margin-left: 80px;
+}
+
+#menu h1
+{
+/*	float: left;*/
+	text-align: left;
+	margin: 0;
+}
+
+#menu ul, #menu li
+{
+	padding: 0;
+	list-style: none;
+	margin: 0;
+	display: inline;
+	margin-bottom: 2em;
+}
+
+#menu #tabs li
+{
+/*	background-color: #f2f2f2;
+	padding: 0;
+	border: 1px solid gray;*/
+}
+
+#menu #tabs a, #menu #tabs a:hover
+{
+	padding: 0.2em 0.6em;
+	color: black;
+	border: 1px none white;
+	border-top: 1px solid gray;
+	border-right: 1px solid gray;
+	border-left: 1px solid gray;
+}
+
+#menu #tabs a:hover
+{
+	background-color: #bfbfbf;
+}
+
+#menu #tabs li.active a
+{
+	padding: 0.2em 0.6em;
+	color: white;
+	font-weight: bold;
+	background-color: gray;
+	border: 1px none black;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+}
+
+
+#menu .links
+{
+	float: right;
+	margin-top: -1.2em;
+}
+
+#menu .links li
+{
+	margin-left: 0.5em;
+}
+
+#menu #links a, #menu #links a:hover
+{
+	color: black;
+	border-color: black;
+}
+
+/* @end */
+
+#submenu
+{
+  	background-color: gray;
+  	padding: 0.5em 0.5em;
+  	margin-bottom: 2em;
+}
+
+#submenu a
+{
+  color: #ebebeb;
+  border-bottom: none;
+  font-weight: bold;
+}
+
+#submenu li.active a
+{
+  color: white;
+}
+
+#submenu a:hover
+{
+  color: white;
+}
+
+#submenu ul, #submenu li
+{
+	padding: 0;
+	list-style: none;
+	margin: 0;
+	display: inline;
+	margin-bottom: 2em;
+}
+
+#submenu li
+{
+  padding-right: 1em;
+}
+
+.rulemenu
+{
+	border: 2px solid gray;
+	background-color: #faf3a4;
+	float:
+	width: 100px;
+}
+
+#addrulesform
+{
+	font-size: 80%;
+}
+
+.addrulesform
+{
+	font-size: 80%;
+}
+
+.last
+{
+	border-color: #CCC;
+	border-width: 1px;
+	border-style: none solid solid solid;
+	font-size: 80%;
+}
+
+.top
+{
+	border-top: 1px solid #CCC;
+}
+
+.toplast
+{
+	border: 1px solid #CCC;
+}
+
+.block { background-color: #FF6264; }
+.pass { background-color: #64FF62; }
+.even
+{
+	background-color: #ebebeb;
+}
+
+.comment
+{
+	border-bottom: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	background-color: #ffddc0;
+	line-height: 1.5em;
+	padding-left: 1em;
+	padding-right: 1em;
+	text-align: left;
+}
+
+.rulecomment
+{
+	text-align: left;
+}
+
+.edit
+{
+	background-color: white; 
+	border: none;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.error
+{
+  border: 2px solid red; 
+  margin: 1em auto; 
+  padding: 1em; 
+  color: red; 
+  font-weight: bold; 
+  width: 40em;
+  font-size: 1.3em;
+}
+
+.notice
+{
+  border: 2px solid #64FF62; 
+  margin: 1em auto; 
+  padding: 1em; 
+  color: #64FF62;
+  font-weight: bold; 
+  width: 40em;
+  font-size: 1.3em;
+}
+
+.nowrap
+{
+	white-space: nowrap;
+}
+
+/*.all { background-color: lightgray; }*/
+
+.add
+{
+	border-top: 1px solid #CCC;
+	margin-top: 1em;
+	padding-top: 0.2em;
+}
+
+.nowrap
+{
+	white-space: nowrap;
+}
+
+.negate
+{
+	text-decoration: line-through;
+}
+
+#main 
+{
+}
+
+.buttons
+{
+	margin-top: 1em;
+	text-align: center;
+}
+
+table.manual
+{
+	margin: 0 auto;
+	width: 70%;
+	line-height: 1.5em;
+}
+
+table.manual caption
+{
+	margin: 0;
+	padding: 0.5em 0 0 0;
+	font-size: 2em;
+	line-height: 1.3em;
+}
+
+table.manual td
+{
+	text-align: left;
+}
+
+table.manual table
+{
+	margin: 1em 2em 1em 2em;
+}
+
+table.manual table td
+{
+	border: 0;
+}
+
+table.manual table td.key
+{
+	text-align: right;
+	font-style: oblique;
+	border-right: 1px solid #CCC;
+}
+
+#main td 
+{
+	padding: 0.2em 0.5em;
+	font-size: 80%;
+}

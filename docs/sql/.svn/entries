@@ -1,0 +1,40 @@
+8
+
+dir
+130
+https://tuvok.allard.nu/svn/pfw/stable/docs/sql
+https://tuvok.allard.nu/svn/pfw
+
+
+
+2007-03-27T23:28:44.521929Z
+130
+allard
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+dce3d87f-81e1-0310-808c-e3a9fc5abe0f
+
+sqlite.sql
+file
+
+
+
+
+2007-03-27T23:28:11.000000Z
+8861cb3ad1d05ce6a349d8aef48a2aa0
+2007-03-27T23:28:44.521929Z
+130
+allard
+

@@ -1,0 +1,7 @@
+Starting with the release of pfw 0.7, a proper testing structure has been built. You can find all the tests in $pfw_home/test.
+
+If you want to run the tests yourself, please download the simpletest framework from http://simpletest.sourceforge.net/. When you've installed simpletest, you can run any of the tests in the test directory, like this: php test/packetfilter/unit/FilterTest.php
+
+You can also very easily create new test cases if you suspect that pfw is misbehaving. Examine the current tests and use that as a template when creating your own.
+
+Enjoy!

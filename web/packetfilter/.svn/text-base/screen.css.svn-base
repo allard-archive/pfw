@@ -1,0 +1,15 @@
+#osmatchlist
+{
+  margin: 0;
+}
+
+#osmatchlist td
+{
+  margin: 0;
+  padding: 0;
+}
+
+#osmatchlist th
+{
+  text-align: left;
+}

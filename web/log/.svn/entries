@@ -1,0 +1,53 @@
+8
+
+dir
+130
+https://tuvok.allard.nu/svn/pfw/stable/web/log
+https://tuvok.allard.nu/svn/pfw
+
+
+
+2007-03-27T23:28:44.521929Z
+130
+allard
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+dce3d87f-81e1-0310-808c-e3a9fc5abe0f
+
+realtime.php
+file
+
+
+
+
+2007-03-27T23:28:12.000000Z
+7f6125b05bd604bd3b766aaed70b081f
+2007-03-27T23:28:44.521929Z
+130
+allard
+has-props
+
+index.php
+file
+
+
+
+
+2007-03-27T23:28:12.000000Z
+5d41130f379f5ad913a8603485c04454
+2007-03-27T23:28:44.521929Z
+130
+allard
+

@@ -1,0 +1,152 @@
+Version History
+===============
+
+Version 0.7.8 (2007-03-28)
+- Fixed an issue where pfw would use icmp-code instead of code
+  reported by Steven Surdock.
+
+Version 0.7.7 (2007-03-25)
+- Replaced all <? and <?= with the <?php variant, removing the
+  need for short_open_tag in php.ini.
+
+Version 0.7.6 (2006-12-14)
+- Added parsing and entering multiple protocols in NAT statements
+- Fixed a bug which caused authpf type anchors like "authpf/*"
+  not to be entered properly
+- Fixed a bug causing queues not to be entered properly if there
+  is only one queue statement
+- Fixed some problems with pages not reloading properly
+- Fixed a couple of typos in the scrub class reported by
+  Serge Basterot.
+
+Version 0.7.5 (2006-07-25)
+- Added parsing for multiple route-to's
+- Added parsing of "set skip" statements
+- Added Optionsclass unit test script
+- Fixed the natedit page so that is reloads automatically when
+  it should.
+- Fixed a small XHTML compliance problem which sometimes would
+  generate & instead of &amp;
+- Moved the stylesheet fromt the body to the header on a lot of
+  web scripts for xhtml compliance reasons
+- Changed from statically defining font size on the screen to a
+  relative measurement. This allows changing of font size on IE
+
+Version 0.7.4 (2006-05-28)
+- Fixed a problem with the display of the system status.
+. Fixed a problem where the filteredit page did not reload
+  properly.
+- Fixed some display errors on the log page.
+- Fixed some XHTML compliance errors.
+- Cleaned up the remote connection testing.
+- Changed from XHMTL 1.1 to XHTML 1.0 transitional.
+
+Version 0.7.3 (2006-05-14)
+- Fixed typo in install.php (thanks to Matt Smith)
+- Fixed typo in include.inc.php (thanks to David D'Amico)
+- Updated the log viewer to only display data if there is any 
+  (thanks to David D'Amico)
+
+Version 0.7.2 (2006-04-05)
+- Fixed icmp6 handling with diffs supplied by Ralf Wagner.
+
+Version 0.7.1 (2006-01-24)
+- Fixed typo in install.php preventing installation
+- Fixed commandwrapper.sh to work with local files
+- Fixed a problem parsing filter rules in brackets, like
+  "pass in from any to ($ext_if)"
+
+Version 0.7
+- Changed Requirement - pfw now requires sqlite and the PHP sqlite
+  extension.
+- Added system status with overview, queueing and statetable views.
+- Added near realtime log viewing.
+- Added the ability to have multiple firewalls in to install on
+  several firewalls simultaneously.
+- Added the ability to save, load, download and upload rulebases.
+- Changed the layout to a more modular structure so that it's easier
+  to add functionality to pfw.
+- Started adding unit testing for the pf classes so that pfw can
+  get proven correctness when parsing/generating rulesets.
+- Macros in macros are now generated as "{ $macro }" instead of 
+  "{" $macro "}".
+- Fixed a bug where a single slash "'" and a double slash '"' 
+  was displayed as "\'" and '\"' in basically all the comments
+  and interface rules.
+
+Version 0.6.2 (2005-05-27)
+- Fixed a typo which prevented editing queues.
+- Fixed a typo which prevented rdr pass to work.
+- Fixed a bug which caused labels and tags to not get parsed correctly.
+- Fixed a bug in the table view which messed up the display if there was 
+  more than 10 entries in the table.
+
+Version 0.6.1 (2005-05-16)
+- Fixed a bug where block drop wasn't properly recognized.
+
+Version 0.6 (2005-04-17)
+- Added extracts from the OpenBSD pf.conf manual at the bottom of the 
+  edit pages.
+- Added Pool options (netmask, random, source-hash, static-port)
+- Added negated rules handling
+- Added Probability
+- Added Allow-opts
+- Added Routing otions (fastroute, route-to, reply-to, dup-to)
+- Added drop options
+- Changed Page Layout with menu on top.
+- Added a print stylesheet.
+- Rdr pass statements can now be edited.
+- Change php session name to pfwsession.
+
+Version 0.5.3 (2005-04-11)
+- Fixed an error where '{foo' wasn't detected. All instances are rewritten
+  to '{ foo' before parsing.
+- Rdr pass statements are now preserved.
+- Fixed a display error where natrules using tables was not displayed properly.
+- Fixed an error where fromport wasn't recognized properly in the filter.
+- Fixed an error which made the table page crash if all options was enabled.
+- Whitespace is now deleted before parsing options (timeouts,...).
+- Cleaned up a control character that was displayed at the beginning of 
+  each web page.
+
+Version 0.5.2 (2004-09-18)
+- Typo in the queue.php file with the link to the altqedit.php page.
+
+Version 0.5.1 (2004-08-26)
+- Fixed a problem with comments not being filtered out properly in 
+  filterrules (pass in all # block in all, could generate a block 
+  in all rule).
+
+Version 0.5 (2004-08-21)
+- Added Queues interface
+- Added Options interface
+- Only use the "{" macro style when using macros in macros.
+- Changed file layout to keep files out of the web space that's 
+  not needed there.
+
+Version 0.4 (2004-07-31)
+- Added Handling of comments, both general comments and rule-specific
+  comments for everything.
+- Included a script for using pfw to update remote machines.
+- Port specifications using <>, <, >, =>, <=, <> and ><.
+- User interface for users, groups, labels, tag and tagged in the filter
+  rules.
+- A couple more session initiation problems fixed. Hopefully all of them :-)
+
+Version 0.3.1 (2004-07-28)
+- Make sure that the session is initiated before anything is displayed
+
+Version 0.3 (2004-07-27)
+- Added Tables Interface
+- Added Traffic Normalization Interface
+- Fixed a problem where cancellation sometimes didn't work
+- Fixed a problem where wrong port would be imported in the nat module
+
+Version 0.2 (2004-07-26)
+- Added the ability to edit tables in the filter
+- Change macro generation to "{" x, y "}"
+- Added TCP flags
+- Added Synproxy state
+
+Version 0.1 (2004-07-25)
+- first public release

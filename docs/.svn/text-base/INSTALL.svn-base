@@ -1,0 +1,51 @@
+To install pfw, follow these simple steps.
+
+1) Make sure you have PHP version 5.0 or later installed (php -v reveals
+the version number).
+
+2) Make sure you have sqlite and the PHP sqlite module installed
+('php -i | grep SQLite' will tell). 
+
+3) Unpack the pfw archive somewhere reachable by your webserver. In this
+document, I will assume that you have installed pfw in
+/var/www/pfw and it doesn't matter where you installed it. As long as you
+change everything accordingly.
+
+4) Install the sqlite database and then:
+cd /var/www/pfw && sqlite conf/config.db < docs/sql/sqlite.sql
+
+5) Make sure that the web server has write access to the conf
+directory: cd /var/www/pfw && chown -R www:www conf
+
+6) Add the following to your /var/www/conf/httpd.conf
+Alias /pfw "/var/www/pfw/web/"
+<Directory "/var/www/pfw/web">
+    AllowOverride None
+    Order allow,deny
+    Allow from 127.0.0.1
+</Directory>
+
+This will allow you to access pfw from 127.0.0.1 only (or tunneled through
+ssh). Please change this to suit your needs. There is currently no builtin 
+authentication in pfw so please read http://httpd.apache.org/docs/howto/auth.html 
+and add authentication accordingly.
+
+7) pfw needs Apache to run in non-chrooted mode (otherwise, we can't
+access /etc/pf.conf) so add httpd_flags="-u" to your /etc/rc.conf.local
+and start apache by issuing 'httpd -u'. In almost all cases, you will
+want to add SSL to your apache config as well. Please read ssl(8) and
+then add httpd_flags="-u -DSSL" and start apache by issuing 'httpd -u
+-DSSL'.
+
+8) pfw relies on sudo to perform privileged operations and sudo needs to
+be configured for this. You need to add a line like this: 
+www ALL = NOPASSWD: /var/www/pfw/bin/*
+to your /etc/sudoers file (edit with visudo and replace /var/www/pfw 
+with the directory where you installed pfw). Feel free to verify the scripts 
+in the bin directory to see that they don't do anything nasty before 
+doing this :-)
+
+
+That's it. Pfw is now installed and ready to be used.
+
+Enjoy!
